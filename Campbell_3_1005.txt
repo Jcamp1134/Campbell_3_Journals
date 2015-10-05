@@ -2,3 +2,5 @@
 
 What are CODE COMMENTS? What are they good for?
 
+Code Comments are good for organization and for the user to find certain codes
+easier.
