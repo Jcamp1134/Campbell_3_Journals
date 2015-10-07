@@ -1,0 +1,5 @@
+A java class is the "blueprint" from which individual objects are created.
+
+A java class used in Javafx is for the shapes and objects.
+
+A method for a class could be any word or word that is camel cased.
