@@ -1,0 +1,68 @@
+package javafxchallenge;
+
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.ArcType;
+import javafx.stage.Stage;
+/**
+ *
+ * @author ghostlylist
+ */
+public class JavaFXChallenge extends Application {
+    
+     public static void main(String[] args) {
+        launch(args);
+    }
+    
+    @Override
+    public void start(Stage primaryStage) {
+        primaryStage.setTitle("Campbell_3_Challenge1");
+        Group root = new Group();
+        Canvas canvas = new Canvas(650, 550);
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        drawSomeLines(gc);
+        drawCircles(gc);   
+        clearCircles(gc);
+        root.getChildren().add(canvas);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+         
+    }
+        private void drawSomeLines(GraphicsContext gc){
+             gc.setLineWidth(10);
+             gc.strokeLine(0, 0, 650, 550);
+             gc.strokeLine(0, 550, 650, 0);
+             gc.setLineWidth(15);
+             gc.strokeLine(325, 0, 325, 200);
+             gc.strokeLine(325, 650, 325, 380);
+             gc.strokeLine(0, 325, 300, 325);
+             gc.strokeLine(650, 325, 300, 325);
+             gc.strokeLine(0, 245, 300, 245);
+             gc.strokeLine(650, 245, 300, 245);
+        
+        
+        }
+    private void drawCircles(GraphicsContext gc) {
+        gc.setFill(Color.FIREBRICK)
+        gc.fillOval(-20, -20, 130, 130)
+        gc.fillOval(540, -20, 130, 130)
+        gc.fillOval(-20, 450, 130, 130)  
+        gc.fillOval(540, 450, 130, 130
+        gc.fillOval(257, 225, 130, 130);
+               
+    }
+   private void clearCircles(GraphicsContext gc){
+       gc.setStroke(Color.GOLD);
+       gc.strokeOval(257, 225, 300, 300);
+       gc.strokeOval(90, 225, 300, 300);
+       
+   }    
+}
+(First time doing this so i dont know if im doing it right)
+I have three different methods each created for every shape such as the lines,
+Ovals and the stroke Ovals. I had to line every X and Y point to get all the 
+right intersections and possitions. 
