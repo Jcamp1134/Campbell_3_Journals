@@ -1,0 +1,6 @@
+A method is a little selection inside of program used to preform a specific
+task.
+I used 2 methods in my guessing game one for the user to imput their name and
+the other for the user to guess the number.
+A while loop is used to loop a program until the specified thing happens to 
+end the loop.
