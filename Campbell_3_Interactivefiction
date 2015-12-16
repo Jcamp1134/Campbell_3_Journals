@@ -1,0 +1,381 @@
+package campbell_3_woeworntextgame;
+import java.util.Scanner;
+
+public class Campbell_3_WoewornTextGame {
+
+    static Scanner name = new Scanner(System.in);
+    public static String yourName;
+    static boolean notCRight;   
+    static boolean wrongQuest;
+    static Scanner Class = new Scanner(System.in);
+    public static String yourClass;
+    
+    
+    
+    
+    public static void main(String[] args) {
+    opening();
+           
+        
+    }    
+    
+    public static void opening() {
+    
+      System.out.println("=============");
+      System.out.println("   XELOEN    ");
+      System.out.println("=============");
+      System.out.println("Choose your race!");
+      System.out.println("-Dwarf- -Elf- -Human-");   
+      Scanner race = new Scanner(System.in);
+         String yourRace = race.nextLine(); //Asks the user to choose a race #Hero
+         if (yourRace.contains("uman")) { //If the user chooses the Human class
+        System.out.println("What is your name, Human?"); //Asks for user imput (Name)
+        
+        yourName = name.nextLine();
+        System.out.println("Welcome to WOEWORN " + yourName + "!");
+        HumanClasses(); 
+         }
+         
+         if (yourRace.contains("lf")) { //If the user chooses the Elf class
+        System.out.println("What is your name, Elf?"); //Asks for user imput (Name)
+        
+        String yourName = name.nextLine();
+        System.out.println("Welcome to WOEWORN " + yourName + "!");
+        ElfClasses(); 
+         }
+         
+         if (yourRace.contains("warf")) { //If the user chooses the Dwarf class
+        System.out.println("What is your name, Dwarf?"); //Asks for user imput (Name)      
+        
+        String yourName = name.nextLine();
+        System.out.println("Welcome to WOEWORN " + yourName + "!");
+        DwarfClasses();
+         }
+         
+         
+         
+         
+         
+         
+    }
+    public static void ElfClasses() { //#method1()
+    System.out.println("Choose your class, Elf.");
+    System.out.println("-Mage- -Archer-");
+    while(!notCRight){
+    Scanner Elass = new Scanner(System.in);
+    String yourClass = Class.nextLine(); //Asks the user (Elf) to pick a class
+    
+    
+    if (yourClass.contains("age")) { //If the user picks Mage
+        notCRight = true; 
+        System.out.println("Oh so your are the Elvish master of spells!");
+        EMagicPath();
+     
+    }else if (yourClass.contains("rcher")) { //If the user picks Archer
+        notCRight = true;  
+        System.out.println("Oh so you are the Elvish master of the bow and arrow!");  
+        EWarriorPath();  
+     }else
+        System.out.println("What was that, " + yourName + "?"); //If the user types in a wrong class
+    
+    }
+    
+    
+    
+    }
+    
+    public static void HumanClasses() { //method2()
+    System.out.println("Choose your class, Human.");    
+    System.out.println("-SwordsMan- -Warlock-");
+    while(!notCRight){
+    Scanner Class = new Scanner(System.in);
+    String yourClass = Class.nextLine(); //Asks the user (Human) to pick a class
+
+    if (yourClass.contains("wordsman") || yourClass.contains("wordsMan")) { //If the user picks Swordsman
+        notCRight = true;
+        System.out.println("Oh so you are the Human master of the sword!");
+        HWarriorPath();
+    
+    }else if (yourClass.contains("arlock")) { //If the user picks warlock
+        notCRight = true; 
+        System.out.println("Oh so you are the Human master of dark magic!");
+        HMagicPath();
+    
+    }else 
+        System.out.println("What was that, " + yourName + "?"); //If the user types in a wrong class
+    }
+    
+    
+    }
+    
+    public static void DwarfClasses() { //method3()
+    System.out.println("Choose your class, Dwarf.");
+    System.out.println("-AxeMan- -Minstrel-");
+    while(!notCRight) {
+    Scanner Class = new Scanner(System.in);
+    String yourClass = Class.nextLine(); //Asks the user (Dwarf) to pick a class
+    
+    if (yourClass.contains("xeman") || yourClass.contains("xeMan")) { //If the user picks Axeman
+        notCRight = true;
+        System.out.println("Oh so you are a Dwarven master of the axe!");
+        DWarriorPath();
+     
+    }else if (yourClass.contains("instrel")) { //If the user picks Minstrel
+        notCRight = true; 
+        System.out.println("Oh so you are the Dwarven master of sounds and music!");
+         DMagicPath();
+     
+    }else 
+        System.out.println("What was that, " + yourName + "?"); //If the user types in a wrong class
+    
+    }
+    }
+
+
+    
+    
+    
+    
+
+    static void DMagicPath() { //method4() If the user chooses Minstrel
+    System.out.println("Welcome, Minstrel, to the last pure light stronghold, kurldoa");
+    System.out.println("You turn around to see many people practicing all types of spectacular magics and spells"
+            + " inside a large carpeted hallway");
+    System.out.println("You then walk over to a window and look out of it to see that you are in a very large castle on top of a tall"
+            + " snowy mountain");
+    System.out.println("You see a cloked man walking over to you and you notice that this significantly old man"
+            + " wasnt even walking he was hovering!");
+    System.out.println("The old man: Dwarf, welcome to kurldoa. I am the head mage here, my name is Roonelt, and yours is... dont tell me dont tell me"
+            + " oh right! Its " + yourName + "! We have been waiting long for you.");
+    System.out.println("We have somethings for you to complete before you are a full member of Kurldoa, but ill let you pick your challenge");
+    System.out.println("-Quest 1. The Creature of The Dark- -Quest 2. The King of Bones-");
+    System.out.println("What'll it be? Quest 1 or Quest 2");
+     while(!wrongQuest){ //#While
+    Scanner quest = new Scanner(System.in);
+    String questChoice = quest.nextLine();
+    if (questChoice.contains("1") || questChoice.contains("Creature") || questChoice.contains("creature")) {
+        notCRight = true; 
+        System.out.println("Roonelt: The creature of the dark good choice good choice! But watch out this quest is challenging and i can only point you down your"
+                + " path to Yuu'dow caverns.");
+    wrongQuest = true;    
+     
+    }else if (questChoice.contains("2") || questChoice.contains("King") || questChoice.contains("king")) {
+        notCRight = true;  
+        System.out.println("Roonelt: Ah the King of Bones! This one will be a challenge and the only help i can provide is the directions to Frn'dow crypts.");  
+        
+    wrongQuest = true;
+    
+    }else
+        System.out.println("What was that, Minstrel?");
+  
+    
+    
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    static void DWarriorPath() { //method5() If the user chooses Axeman
+    System.out.println("Welcome, AxeMan, to the roughest training camp in all of Xeloen");
+    System.out.println("You turn and see many different people clashing swords, shooting bows and"
+            + " enjoying large kegs of old dwarvish ale, out on a huge grassy field with rows and rows of tents");
+    System.out.println("You then see a large Dwarvern man hold a giant axe on his sholder about the size of his giant dwarvern beard.");
+    System.out.println("Large Dwarvern man: Welcome friend I like ya' already why dont you go grab ye' self a pint of ale! Oh but it isnt dat' easy friend"
+            + " ye' have to prove ye' self before we just let you in to our camp, oh an' my name is Volgi i be the head general of this camp!");
+    System.out.println("We have somethings for ye' to complete before ye' are a full warrior of Cogium but ye' get to choose the challenge!");
+    System.out.println("-Quest 1. -The strongest poison- Quest 2. -Water of Hal'gon-");
+    System.out.println("What'll it be? Quest 1 or Quest 2");
+     while(!wrongQuest){
+    Scanner quest = new Scanner(System.in);
+    String questChoice = quest.nextLine();
+    if (questChoice.contains("1") || questChoice.contains("strongest") || questChoice.contains("Strongest")) {
+        notCRight = true; 
+        System.out.println("Volgi: Ah we be lookin' for this strong poison for a long time now, te' thing is i can only show you thy directions.");
+    wrongQuest = true;    
+     
+    }else if (questChoice.contains("2") || questChoice.contains("water") || questChoice.contains("Water")) {
+        notCRight = true;  
+        System.out.println("Volgi: This water you be going for has many healing properties and we be needin' it very soon, but i can only show you thy directions.");  
+        
+    wrongQuest = true;
+    
+    }else
+        System.out.println("What was that, Dwarf?");
+    }
+    }
+    
+    
+    
+    
+    
+    
+    static void HWarriorPath() { //If the user chooses Swordsman
+    System.out.println("Welcome, SwordsMan, to the roughest training camp in all of Xeloen");
+    System.out.println("You turn and see many different people clashing swords, shooting bows and"
+            + " enjoying large kegs of old dwarvish ale, out on a huge grassy field with rows and rows of tents");
+    System.out.println("You then see a large Dwarvern man hold a giant axe on his sholder about the size of his giant dwarvern beard.");
+    System.out.println("Large Dwarvern man: Welcome friend I like ya' already why dont you go grab ye' self a pint of ale! Oh but it isnt dat' easy friend"
+            + " ye' have to prove ye' self before we just let you in to our camp, oh an' my name is Volgi i be the head general of this camp!");
+    System.out.println("We have somethings for ye' to complete before ye' are a full warrior of Cogium but ye' get to choose the challenge!");
+    System.out.println("-Quest 1. -The strongest poison- Quest 2. -Water of Hal'gon-");
+    System.out.println("What'll it be? Quest 1 or Quest 2");
+     while(!wrongQuest){
+    Scanner quest = new Scanner(System.in);
+    String questChoice = quest.nextLine();
+    if (questChoice.contains("1") || questChoice.contains("strongest") || questChoice.contains("Strongest")) {
+        notCRight = true; 
+        System.out.println("Volgi: Ah we be lookin' for this strong poison for a long time now, te' thing is i can only show you thy directions.");
+    wrongQuest = true;    
+     
+    }else if (questChoice.contains("2") || questChoice.contains("water") || questChoice.contains("Water")) {
+        notCRight = true;  
+        System.out.println("Volgi: This water you be going for has many healing properties and we be needin' it very soon, but i can only show you thy directions.");  
+        
+    wrongQuest = true;
+    
+    }else
+        System.out.println("What was that, SwordsMan?");
+    }
+    }
+    
+    static void HMagicPath() { //If the user chooses Warlock
+    System.out.println("Welcome, Warlock, to the last pure light stronghold, kurldoa");
+    System.out.println("You turn around to see many people practicing all types of spectacular magics and spells"
+            + " inside a large carpeted hallway");
+    System.out.println("You then walk over to a window and look out of it to see that you are in a very large castle on top of a tall"
+            + " snowy mountain");
+    System.out.println("You see a cloked man walking over to you and you notice that this significantly old man"
+            + " wasnt even walking he was hovering!");
+    System.out.println("The old man: Dwarf, welcome to kurldoa. I am the head mage here, my name is Roonelt, and yours is... dont tell me dont tell me"
+            + " oh right! Its " + yourName + "! We have been waiting long for you.");
+    System.out.println("We have somethings for you to complete before you are a full member of Kurldoa, but ill let you pick your challenge");
+    System.out.println("-Quest 1. The Creature of The Dark- -Quest 2. The King of Bones-");
+    System.out.println("What'll it be? Quest 1 or Quest 2");
+     while(!wrongQuest){
+    Scanner quest = new Scanner(System.in);
+    String questChoice = quest.nextLine();
+    if (questChoice.contains("1") || questChoice.contains("Creature") || questChoice.contains("creature")) {
+        notCRight = true; 
+        System.out.println("Roonelt: The creature of the dark good choice good choice! But watch out this quest is challenging and i can only point you down your"
+                + " path to Yuu'dow caverns.");
+    wrongQuest = true;    
+    
+    }else if (questChoice.contains("2") || questChoice.contains("King") || questChoice.contains("king")) {
+        notCRight = true;  
+        System.out.println("Roonelt: Ah the King of Bones! This one will be a challenge and the only help i can provide is the directions to Frn'dow crypts.");  
+        
+    wrongQuest = true;
+    
+    }else
+        System.out.println("What was that, Warlock?");
+    }
+    } 
+    
+    
+    
+    
+    
+    
+    static void EMagicPath() {
+    System.out.println("Welcome to the last pure light stronghold, kurldoa");
+    System.out.println("You turn around to see many people practicing all types of spectacular magics and spells"
+            + " inside a large carpeted hallway");
+    System.out.println("You then walk over to a window and look out of it to see that you are in a very large castle on top of a tall"
+            + " snowy mountain");
+    System.out.println("You see a cloked man walking over to you and you notice that this significantly old man"
+            + " wasnt even walking he was hovering!");
+    System.out.println("The old man: Dwarf, welcome to kurldoa. I am the head mage here, my name is Roonelt, and yours is... dont tell me dont tell me"
+            + " oh right! Its " + yourName + "! We have been waiting long for you.");
+    System.out.println("We have somethings for you to complete before you are a full member of Kurldoa, but ill let you pick your challenge");
+    System.out.println("-Quest 1. The Creature of The Dark- -Quest 2. The King of Bones-");
+    System.out.println("What'll it be? Quest 1 or Quest 2");
+     while(!wrongQuest){
+    Scanner quest = new Scanner(System.in);
+    String questChoice = quest.nextLine();
+    if (questChoice.contains("1") || questChoice.contains("Creature") || questChoice.contains("creature")) {
+        notCRight = true; 
+        System.out.println("Roonelt: The creature of the dark good choice good choice! But watch out this quest is challenging and i can only point you down your"
+                + " path to Yuu'dow caverns.");
+    wrongQuest = true;    
+     TCODQuest1();
+    }else if (questChoice.contains("2") || questChoice.contains("King") || questChoice.contains("king")) {
+        notCRight = true;  
+        System.out.println("Roonelt: Ah the King of Bones! This one will be a challenge and the only help i can provide is the directions to Frn'dow crypts.");   
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
+        wrongQuest = true;
+     TKOBQuest1();
+    }else
+        System.out.println("What was that, Elf?");
+    }
+    }
+    
+    
+    
+    
+    
+    static void EWarriorPath() {
+    System.out.println("Welcome, Archer, to the roughest training camp in all of Xeloen");
+    System.out.println("You turn and see many different people clashing swords, shooting bows and"
+            + " enjoying large kegs of old dwarvish ale, out on a huge grassy field with rows and rows of tents.");
+    System.out.println("You then see a large Dwarvern man hold a giant axe on his sholder about the size of his giant dwarvern beard.");
+    System.out.println("Large Dwarvern man: Welcome friend I like ya' already why dont you go grab ye' self a pint of ale! Oh but it isnt dat' easy friend"
+            + " ye' have to prove ye' self before we just let you in to our camp, oh an' my name is Volgi i be the head general of this camp!");
+    System.out.println("We have somethings for ye' to complete before ye' are a full warrior of Cogium but ye' get to choose the challenge!");
+    System.out.println("-Quest 1. -The strongest poison- Quest 2. -Water of Hal'gon-");
+    System.out.println("What'll it be? Quest 1 or Quest 2");
+     while(!wrongQuest){
+    Scanner quest = new Scanner(System.in);
+    String questChoice = quest.nextLine();
+    if (questChoice.contains("1") || questChoice.contains("strongest") || questChoice.contains("Strongest")) {
+        notCRight = true; 
+        System.out.println("Volgi: Ah we be lookin' for this strong poison for a long time now, te' thing is i can only show you thy directions.");
+    wrongQuest = true;    
+     
+    }else if (questChoice.contains("2") || questChoice.contains("water") || questChoice.contains("Water")) {
+        notCRight = true;  
+        System.out.println("Volgi: This water you be going for has many healing properties and we be needin' it very soon, but i can only show you thy directions.");  
+        
+    wrongQuest = true;
+    
+    }else
+        System.out.println("What was that, Archer?");
+        
+     }
+    }
+    
+    
+    public static void TKOBQuest1() {
+    System.out.println("You begin on your path to Frn'dow crypts");
+    System.out.println("After a long journey you finally make it to the Frn'dow crypts.");
+    System.out.println("The Crypts look like an old run down temple descending into the depths of the earth.");    
+    System.out.println("You enter the crypts, your spells ready for attack, walking slowly down the steps into the cold dark depths, the wall torches old and burnt out.");
+    System.out.println("*Click* Then everything becomes clear as the old torches light simultaneously, you then relize that these old crypts are full of magic and runes.");
+    System.out.println("You finally make it to the bottom of the steps just to relize that there is 3 different paths one on the left, right and middle.");
+    System.out.println("Each of the paths marked with a different symbol.");
+    PathWays();
+    }
+    public static void PathWays() {
+    System.out.println("LEFT - A cross");
+    System.out.println("MIDDLE - Hieroglyphics of bowing people");
+    System.out.println("RIGHT - The symbol is worn and cannot be made out");
+    }
+    
+    
+    
+    
+    public static void TCODQuest1() {
+    System.out.println("You begin on your path to Yuu'dow caverns");
+    
+    
+    }
+
+
+
+}
+
+
