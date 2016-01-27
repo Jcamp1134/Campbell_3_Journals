@@ -1,0 +1,3 @@
+To add an image to my Slick game i would have to create a new class for the
+item or entity i tried creating, then i would call the image location in the
+class its self.
