@@ -1,0 +1,4 @@
+public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
+throws SlickException { 
+
+This code is a method because it has a render value passed in it
