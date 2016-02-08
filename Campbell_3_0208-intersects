@@ -1,0 +1,3 @@
+In our Slick game we would check to see if our weapons damaged enemies using
+hitboxes and the "isVisible" command, thus making it to whenever an enemy 
+passes through the weapons hitbox the enemy disapears. 
