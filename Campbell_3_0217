@@ -1,0 +1,21 @@
+Arrays are used for lists of data. 
+What is the code for an int array?
+int array[] = new int[];
+What is the code for an String array?
+String[] New = new String[];
+What is the code for an boolean array?
+Boolean freq[] = new Boolean[];
+What is the code for an double array?
+ double[] d1 = new double[]{3,2,5,4,1};
+How would you change the first value of the int array to 42?
+int array[] = new int[42];
+Of the String array to "Bob"?
+String[] Bob = new String[];
+What does this do: private String[] dessert = new String[3];
+Creates three different strings for the item "dessert"
+What does this do: private String[] postres = {"rice pudding", "pan dulce", "bunuelos"}
+Gives the three dessert items
+How are they different?
+One gives three random strings the other gives already called strings
+How would we replace "bunuelos" with "apple pie"?
+We would replace the names
