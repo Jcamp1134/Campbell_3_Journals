@@ -1,0 +1,7 @@
+To make the orb move we will have to use the players location, plus the 
+direction of the last clicked arrow key as seen here:
+if (orb1.getDirection() == 0) {
+                    orb1.setX((int) player.x);
+                    orb1.setY(orb1.getY() - 5);
+This part of the entire orb code sees if the player is looking up and if the 
+spacebar is pressed while his direction is "0" then the orb will fire upwards.
