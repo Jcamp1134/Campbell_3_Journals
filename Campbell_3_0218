@@ -1,0 +1,23 @@
+public Animation Playeranime, up, down, left, right, sprite, wait;
+    public Player() throws SlickException {
+        SpriteSheet runningSS = new SpriteSheet(
+                "res/ogrespritesheet.png", 64, 64, 0);
+        up = new Animation();
+        up.setAutoUpdate(true);
+        up.addFrame(runningSS.getSprite(0, 8), 330);
+        up.addFrame(runningSS.getSprite(1, 8), 330);
+        up.addFrame(runningSS.getSprite(2, 8), 330);
+        up.addFrame(runningSS.getSprite(3, 8), 330);
+        up.addFrame(runningSS.getSprite(4, 8), 330);
+        up.addFrame(runningSS.getSprite(5, 8), 330);
+        up.addFrame(runningSS.getSprite(6, 8), 330);
+        up.addFrame(runningSS.getSprite(7, 8), 330);
+        up.addFrame(runningSS.getSprite(8, 8), 330);
+
+This code gives the animation of the sprite itself when the player moves up. 
+An array is a list of data.
+To make an array you wpuld put the data type then brakets, Ex. type[]; 
+An arraylist is basicly a list of arrays.
+You make an array list calling single items.
+An array is by its self and an arraylist is many arrays.
+We could make a health counter by setting ints, and strings.
