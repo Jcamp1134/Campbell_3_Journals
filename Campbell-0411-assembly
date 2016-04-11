@@ -1,0 +1,7 @@
+An assembly is a language program only containing the code necessary to
+preform the task given and gives direct and complete control over system
+hardware.
+It is good for speed, space-efficiency and simplness.
+An assembly is different from java for the fact that it is not portable and is
+more difficult than java.
+java is a low level language and assembly is a high level.
