@@ -1,0 +1,30 @@
+An array is sorta like a "Container" to hold a given value.
+To create a String array one would have to jsut declare an array a 
+string and give it an initial size.
+A correct syntax for a 2-D array would need a large array of any data
+type.
+A correct syntax foe a 3-D array would need multiple large arrays of
+any data.
+For a 1-D array to work and to change the value of it you would need
+a basic code such as: int[] nums = new int[4]; and just change the 
+initial size.
+Basic syntax for a while loop is quite simple for the fact that mostly
+every while loop is set up the same way as seen in this example:
+class WhileDemo {
+    public static void main(String[] args){
+        int count = 1;
+        while (count < 11) {
+            System.out.println("Count is: " + count);
+            count++;
+        }
+    }
+}
+If you want to call a method inside of main you would basic array
+lists and "publics".
+Its is recomended to use cammelCasing when using a scanner input to
+keep track of what youre doing and just make it easier to read.
+We would use different methods when moving the protagonist to insure a
+clean and mess free code.
+Some values we would pass across methods are: Public, private, and static.
+
+
