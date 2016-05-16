@@ -1,0 +1,24 @@
+Casting is taking an object type and turning it into another object type. 
+Up-casting is casting to a supertype.
+Downcasting is casting to a subtype.
+
+class Player {
+int health = 100;
+}
+
+class User extends Player { }
+
+class Human extends User { }
+
+class Skeleton extends User { }
+
+public class choose {
+public static void main(String[] args) {
+Human h = new Human();
+System.out.println(c.health);
+Skeleton s = new Skeleton();
+System.out.println(d.health);
+}
+}
+
+The primative data types in java are: byte, short, int, double, char, float, long and boolean.
