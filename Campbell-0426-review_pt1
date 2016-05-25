@@ -1,0 +1,17 @@
+    public static int cubedNumber(int n){
+        return n*n*n;
+
+    float y(float x)
+       {
+         return x*x*x;
+       }
+   
+   public class Student{
+   int roomNumber = 12;
+   }
+   class roomNumbers extends Student {
+   if (roomNumber < 12 || roomNumber >12) {
+           System.out.println("Wrong Room");
+           }
+           }
+I would love to create a big light show with sounds and buttons.
