@@ -1,0 +1,24 @@
+public class Hero{
+  public health = 100;
+  public int score = 0;
+  boolean hasWeapon = true;
+  public int dex = 5;
+  public int perception = 1;
+  int x;
+  int y;
+  int z;
+  string symbol;
+public static void main (string[] args) {
+  Scanner name = new Scanner(System.in); 
+  System.out.println("What is your name hero?")
+  heroName = name.next();
+  System.out.println("Welcome " + heroName + "!");
+  Scanner symbol = new Scanner(System.in); 
+  System.out.println("Which character do you want hero? Pick one of the given symbols and type it in: @, #, %")
+  heroSymbol = symbol.next();
+  System.out.println("You have choosen " + heroSymbol + ".");
+  }
+    }
+    
+    You wouldnt initialize the hero in the hero class itself because then it would create some complications and make the code a lot 
+    harder to use then it should be.
